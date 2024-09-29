@@ -24,6 +24,9 @@ kubectl wait --for=condition=Available deployment --all -n argocd
 
 By default, the Argo CD API server is not exposed. To access it, you can either port-forward or create an ingress for that you need a domain so try to create service by using below yaml file:
 
+
+
+jj
 `argocd-loadbalancer.yaml`:
 ```yaml
 apiVersion: v1
