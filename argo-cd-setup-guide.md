@@ -116,7 +116,7 @@ Now, let's create an Argo CD Application that references your GitHub repository.
 
 ```bash
 argocd app create guestbook \
-  --repo https://github.com/yourusername/yourrepo.git \
+  --repo https://github.com/PureLogic-Material/-Sample-APP-WITH-ARGO-CD.git \
   --path . \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace default
