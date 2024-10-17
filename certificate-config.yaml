@@ -1,0 +1,39 @@
+# Kubernetes API version and resource type for cert-manager Certificate
+apiVersion: cert-manager.io/v1
+kind: Certificate
+
+metadata:
+  # Name of the Certificate resource
+  name: guestbook-ui-cert
+
+spec:
+  # Name of the secret where the certificate will be stored
+  # This should match the secretName in your Ingress TLS configuration
+  secretName: guestbook-ui-tls
+
+  # Request renewal when the certificate is 10 days (240 hours) from expiry
+  renewBefore: 240h
+
+  # List of domain names for which the certificate is valid
+  dnsNames:
+  - 'test.mujahidhussain.store'
+  # If you want a wildcard certificate, use:
+  # - '*.yourdomain.com'
+
+  # Reference to the issuer that will generate the certificate
+  issuerRef:
+    # Name of the ClusterIssuer we created earlier
+    name: letsencrypt-prod
+    # Specifies that we're using a ClusterIssuer, not a namespaced Issuer
+    kind: ClusterIssuer
+
+  # The duration of the certificate (optional, default is 90 days)
+  duration: 2160h # 90 days
+
+  # Whether to create a new private key for each renewal (optional)
+  privateKey:
+    rotationPolicy: Always
+
+# Note: Replace 'yourdomain.com' with your actual domain name
+# This Certificate resource will instruct cert-manager to obtain a certificate
+# for your domain using the specified ClusterIssuer
