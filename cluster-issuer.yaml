@@ -9,15 +9,19 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod-account-key
     solvers:
-    - selector:
-        dnsZones:
-        - 'test.mujahidhussain.store'
-      dns01:
-        webhook:
-          config:
-            apiKeySecretRef:
-              name: godaddy-api-key
-              key: token
-            ttl: 600
-          groupName: acme.mycompany.com
-          solverName: godaddy
+    - http01:
+        ingress:
+          class: nginx  
+    # solvers:
+    # - selector:
+    #     dnsZones:
+    #     - 'test.mujahidhussain.store'
+    #   dns01:
+    #     webhook:
+    #       config:
+    #         apiKeySecretRef:
+    #           name: godaddy-api-key
+    #           key: token
+    #         ttl: 600
+    #       groupName: acme.mycompany.com
+    #       solverName: godaddy

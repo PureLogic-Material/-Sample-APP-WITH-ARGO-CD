@@ -1,5 +1,11 @@
 # SSL Setup Guide with cert-manager and GoDaddy
 
+https://github.com/snowdrop/godaddy-webhook/tree/main
+
+OR
+
+https://cert-manager.io/docs/tutorials/getting-started-aks-letsencrypt/
+
 ## 1. Install cert-manager
 
 First, install cert-manager in your cluster:
