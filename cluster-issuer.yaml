@@ -8,13 +8,13 @@ spec:
     email: rajazainjanjua333@gmail.com
     privateKeySecretRef:
       name: letsencrypt-prod-account-key
-    solvers:
-    - http01:
-        ingress: {}
     # solvers:
     # - http01:
-    #     ingress:
-    #       class: nginx  
+    #     ingress: {}
+    solvers:
+    - http01:
+        ingress:
+          class: public  
     # solvers:
     # - selector:
     #     dnsZones:
