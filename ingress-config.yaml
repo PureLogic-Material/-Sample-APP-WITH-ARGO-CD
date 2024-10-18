@@ -4,6 +4,7 @@ kind: Ingress
 metadata:
   # Name of the Ingress resource
   name: guestbook-ui-ingress
+  namespace: backend
   annotations:
     # Specifies that we're using the NGINX Ingress Controller
 
