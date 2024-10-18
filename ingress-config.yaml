@@ -6,7 +6,7 @@ metadata:
   name: guestbook-ui-ingress
   annotations:
     # Specifies that we're using the NGINX Ingress Controller
-    kubernetes.io/ingress.class: nginx
+
     # Tells cert-manager to use the "letsencrypt-prod" ClusterIssuer to obtain an SSL certificate
     cert-manager.io/issuer: "letsencrypt-prod"
     # Configures NGINX to redirect HTTP traffic to HTTPS
@@ -39,7 +39,4 @@ spec:
             # Port on the Service to route traffic to
             port: 
               number: 80
-
-# Note: Replace 'yourdomain.com' with your actual domain name in both the 'tls' and 'rules' sections
-# The SSL certificate will be automatically requested and renewed by cert-manager
-# Traffic will be routed to the 'guestbook-ui' Service on port 80
+  ingressClassName: nginx
