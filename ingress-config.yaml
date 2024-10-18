@@ -10,7 +10,6 @@ metadata:
     # Tells cert-manager to use the "letsencrypt-prod" ClusterIssuer to obtain an SSL certificate
     cert-manager.io/issuer: "letsencrypt-prod"
     # Configures NGINX to redirect HTTP traffic to HTTPS
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
 
 spec:
   # TLS configuration for HTTPS
