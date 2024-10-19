@@ -9,10 +9,11 @@ metadata:
     # Specifies that we're using the NGINX Ingress Controller
 
     # Tells cert-manager to use the "letsencrypt-prod" ClusterIssuer to obtain an SSL certificate
-    cert-manager.io/issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
     # Configures NGINX to redirect HTTP traffic to HTTPS
 
 spec:
+  ingressClassName: nginx
   # TLS configuration for HTTPS
   tls:
   - hosts:
@@ -39,4 +40,4 @@ spec:
             # Port on the Service to route traffic to
             port: 
               number: 80
-  ingressClassName: nginx
+  

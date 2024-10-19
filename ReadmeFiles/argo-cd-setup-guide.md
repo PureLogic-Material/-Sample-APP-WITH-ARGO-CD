@@ -66,6 +66,7 @@ The initial password for the `admin` account is auto-generated. Retrieve it with
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
+A8FZ4EC3psqQEQBc
 
 Use this password to log in to the Argo CD UI or CLI.
 
