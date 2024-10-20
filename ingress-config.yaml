@@ -6,8 +6,6 @@ metadata:
   name: guestbook-ui-ingress
   namespace: backend
   annotations:
-    # Specifies that we're using the NGINX Ingress Controller
-
     # Tells cert-manager to use the "letsencrypt-prod" ClusterIssuer to obtain an SSL certificate
     cert-manager.io/cluster-issuer: letsencrypt-prod
     # Configures NGINX to redirect HTTP traffic to HTTPS
