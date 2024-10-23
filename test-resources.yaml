@@ -30,9 +30,15 @@ spec:
 # Did Already:
 # https://stackoverflow.com/questions/75026836/waiting-for-http-01-challenge-propagation-wrong-status-code-404-expected-20
 
-To Check it exist or not 
-kubectl run -it --rm --restart=Never debug --image=curlimages/curl -- curl http://test.mujahidhussain.store/
-or 
-kubectl run -it --rm --restart=Never debug --image=curlimages/curl -- curl http://test.mujahidhussain.store//.well-known/acme-challenge/zTbCqrs86fEw0Mj7MymYeunIaO_nfEO9ODMYGkDcgoo
-or 
-kubectl run -it --rm --restart=Never debug --image=curlimages/curl -- curl http://test.mujahidhussain.store/.well-known/acme-challenge/
+# To Check it exist or not 
+# kubectl run -it --rm --restart=Never debug --image=curlimages/curl -- curl http://test.mujahidhussain.store/
+# or 
+# kubectl run -it --rm --restart=Never debug --image=curlimages/curl -- curl http://test.mujahidhussain.store//.well-known/acme-challenge/zTbCqrs86fEw0Mj7MymYeunIaO_nfEO9ODMYGkDcgoo
+# or 
+# kubectl run -it --rm --restart=Never debug --image=curlimages/curl -- curl http://test.mujahidhussain.store/.well-known/acme-challenge/
+
+# https://community.letsencrypt.org/t/k8s-waiting-for-http-01-challenge-propagation-wrong-status-code-400-expected-200/222675/9
+
+# kubectl rollout restart deployment -n cert-manager
+# kubectl rollout restart deployment -n ingress-nginx
+# kubectl rollout restart deployment -n kube-system coredns

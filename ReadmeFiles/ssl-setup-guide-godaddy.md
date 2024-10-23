@@ -1,11 +1,15 @@
 # SSL Setup Guide with cert-manager and GoDaddy
 
 https://github.com/snowdrop/godaddy-webhook/tree/main
-
-OR
-
 https://cert-manager.io/docs/tutorials/getting-started-aks-letsencrypt/
-
+https://cert-manager.io/docs/installation/
+<!-- Example Links -->
+https://github.com/sekhar5031/ingress-certmanager/blob/main/ingress-controller.yaml
+https://www.youtube.com/watch?v=DJ2sa49iEKo
+<!-- Github Account: -->
+https://github.com/antonputra/tutorials/blob/main/lessons/194/1-example/1-deployment.yaml
+<!-- TroubleShooting Links -->
+https://cert-manager.io/docs/troubleshooting/acme/#3-troubleshooting-challenges
 ## 1. Install cert-manager
 
 First, install cert-manager in your cluster:
